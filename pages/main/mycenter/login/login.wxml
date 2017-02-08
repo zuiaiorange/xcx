@@ -1,0 +1,22 @@
+<view class="wrap">
+	<view class="loginwrap">
+		<view class="loginul">
+			<block wx:for-items="{{list}}" wx:key="index">
+				<view class="loginli">
+					<span class="wenan">
+						{{item.name}}:
+					</span>
+					<input type="{{item.typ}}" bindinput="bindInput" placeholder="{{item.name}}"  id="{{item.id}}"  data-index="{{index}}"/>
+					
+				</view>
+				<view class="tip" wx:if="{{item.flag}}" >
+						{{item.tip}}	
+				</view>
+			</block>
+		</view>
+	</view>
+	<view class="loginbtn" bindtap="loginEvent">
+		{{login.text}}
+	</view>
+</view>
+

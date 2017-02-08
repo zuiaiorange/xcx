@@ -1,0 +1,14 @@
+<view class="container ">
+  <view class="empty" wx:if="{{empty}}}">
+	<view class="text">
+		您的购物车为空
+	</view>
+	<view class="imgwrap">
+		<image src="../../../image/empty.png"/>
+	</view>
+	<view class="goshop" bindtap="goshop">
+		去逛逛
+	</view>
+
+  </view>
+</view> 

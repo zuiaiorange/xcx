@@ -1,0 +1,45 @@
+<view class="detailwrap {{footerData[0].active == 0 ? 'hide' : ''}} {{footerData[0].active}}" >
+	<view class="detailImg">
+		<image src="{{detailList.goodsListImg}}"/>
+	</view>
+	<view class="goodname">
+		{{detailList.goodsName}}
+	</view>
+	<view class="pricedo">
+		<view class="countprice">
+			<span class="red">市场价:￥{{detailList.price}}</span>
+			
+			<span>{{detailList.discount}} 折</span>	
+		</view>
+		<view class="buynumber">
+			{{detailList.buynumber}}人购买过
+		</view>	
+	</view>	
+</view>	
+<!--fdsaaaaaaaaaaaaaa-->
+<view class="detailintroduce {{footerData[1].active}} {{footerData[1].active == 0 ? 'hide' : ''}}">
+	<view class="intro">
+		<block wx:for-items="{{detailList.imgsUrl}}" wx:key="key">
+			<view class="deIntroduce">
+				<image src="{{item}}"></image>
+			</view>
+		</block>
+		<p>{{detailList.detail}}</p>
+	</view>
+</view>
+<!--fafadfffffffffffff-->
+<view class="detailphoto {{footerData[2].active}} {{footerData[2].active == 0 ? 'hide' : ''}}">
+	<swiper class= 'nimei' indicator-dots="{{indicatorDots}}"
+	autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+			<block wx:for="{{detailList.goodsBenUrl}}" wx:key="index">
+				<swiper-item>
+				<image src="{{item}}" class="slide-image"/>
+				</swiper-item>
+			</block>
+	</swiper>
+</view>
+<footer class="ftbt">
+		<block wx:for-items="{{footerData}}" wx:key="index">
+			<span class="{{item.active == 1? 'on' : '' }}" bindtap="tabChang" data-key ="{{index}}">{{item.text}}</span>
+		</block>
+</footer>

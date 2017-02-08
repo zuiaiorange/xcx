@@ -1,0 +1,32 @@
+<view class="homepage">
+  	<view class="centertop">
+		<view class="centerphpto">
+			<image src="{{userimg_url}}"/>
+		</view>	
+		<view class="centerright">
+			<view class="centerName">
+				昵称：{{userID}}
+			</view>
+
+			<view class="resigerWrap" wx:if="{{noLogin}}">
+				<block wx:for-items="{{btnText}}" wx:key="key">
+					<view class="{{item.className}}" bindtap="loginOrResiger" data-param= "{{item.className}}" id="">
+						{{item.text}}
+					</view>	
+				</block>
+				
+					
+			</view>		
+		</view>	
+  	</view>
+  	<view class="centerConter">
+		<block wx:for-items="{{list}}" wx:key="index">
+				<view class="{{item.class}}" bindtap="urlTo" id="{{item.id}}">
+					{{item.text}} {{index}}
+					<view class="jiantou">	
+					</view>
+				</view>
+		</block>			
+  	</view>
+</view>
+

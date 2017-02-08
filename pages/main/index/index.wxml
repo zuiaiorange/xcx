@@ -1,0 +1,45 @@
+<view class="container">
+	<swiper indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" >
+		<block wx:for="{{imgUrls}}" wx:key="index">
+			<navigator url="/pages/main/index/detail/detail?goodsID={{item.goodsID}}" class="widget">
+				<swiper-item>
+					<image src="{{item.goodsBenUrl[0]}}" class="slide-image" width="355" height="150"/>
+				</swiper-item>
+			</navigator>
+		</block>
+	</swiper>
+	  <scroll-view class="scrollwrap" scroll-y="true"  bindscrolltolower="scrollower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+	  <view id="top"></view>
+		<ul class="good">
+			<block wx:for-items="{{list}}" wx:key="index">
+			 <navigator url="/pages/main/index/detail/detail?goodsID={{item.goodsID}}" class="widget">
+				<li id="{{item.classID}}" class="goodlist">
+					<view class="left" >
+					<image src="{{item.goodsListImg}}"/>
+					</view>	
+					<view class="right">
+						<view class="destion">
+							{{item.goodsName}}
+						</view>
+						<view class="rigthtop">
+							<view class="priceabout">
+								<div class="help">
+									<span class="price">￥{{item.price}}</span>
+									<span class="discunt">￥{{item.discuntprice}}</span>
+								</div>
+								
+								<span class="pricecount">{{item.discount}}折</span>
+							</view>
+							<view class="addcar" catchtap="addcar" id="{{item.goodsID}}">
+								<image src='../../../image/addcar.png'/>
+							</view>	
+						</view>
+
+					</view>			
+				</li>
+				</navigator>
+			</block>
+		</ul>
+	</scroll-view>
+</view>

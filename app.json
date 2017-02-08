@@ -1,0 +1,50 @@
+{
+  "pages":[
+    
+    "pages/main/index/index",
+    "pages/main/cloect/cloect",
+    "pages/main/mycenter/mycenter",
+    "pages/main/mycenter/login/login",
+    "pages/main/index/detail/detail"
+   
+    
+    
+
+   
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#afc",
+    "navigationBarTitleText": "Welcome",
+    "navigationBarTextStyle":"yellow"
+  },
+  "networkTimeout": {
+        "request": 12000
+  },
+  "tabBar": {
+        "color": "#888888",
+        "selectedColor": "#3cc51f",
+        "borderStyle": "white",
+        "backgroundColor": "#ffffff",
+        "list": [
+          {
+           "pagePath": "pages/main/index/index",
+            "iconPath": "image/home_icon2.png",
+            "selectedIconPath": "image/home_icon2_on.png",
+            "text": "秀场"
+        }, {
+            "pagePath": "pages/main/cloect/cloect",
+            "iconPath": "image/home_icon2.png",
+            "selectedIconPath": "image/home_icon2_on.png",
+            "text": "购物车"
+        },
+        {
+            "pagePath": "pages/main/mycenter/mycenter",
+            "iconPath": "image/home_icon1.png",
+            "selectedIconPath": "image/home_icon1_on.png",
+            "text": "我的"
+        }]
+    }
+
+
+}

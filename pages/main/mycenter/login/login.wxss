@@ -1,0 +1,46 @@
+.loginwrap{
+	width:100%;
+	display: flex;
+	padding-top: 50px;
+}
+.loginul{
+	width: 100%;
+ 	padding:0 10%;
+}
+.loginli{
+	width: 100%;
+	height:26px;
+	display: flex;
+	margin-bottom:10px;
+}
+.loginli .wenan{
+	width:60px;
+	height: 27px;
+	line-height: 27px;
+	border-radius: 3px;
+}
+.loginli input{
+	flex:1;
+	height: 25px;
+	line-height: 25px;
+	border:1px solid #ccc;
+	margin-right: 20px
+}
+.tip{
+	color: #f55;
+	padding-left:60px;
+	margin-bottom:10px;
+}
+.loginbtn{
+	width:80%;
+	height:100rpx;
+	margin: 10px auto;
+	text-align: center;
+	line-height: 100rpx;
+	border:1px solid #f3f3f3;
+	border-radius: 5px;
+	background-color: greenyellow
+}
+.loginbtn:active{
+	background-color: lawngreen;
+}
